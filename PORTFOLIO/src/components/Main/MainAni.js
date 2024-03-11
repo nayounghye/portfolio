@@ -241,20 +241,20 @@ const MainAni = () => {
     window.scrollTo(0, 0);
   };
 
-  let fullscreen;
-  let fsEnter = document.getElementById('fullscr');
-  fsEnter.addEventListener('click', function (e) {
-    e.preventDefault();
-    if (!fullscreen) {
-      fullscreen = true;
-      document.documentElement.requestFullscreen();
-      fsEnter.innerHTML = 'Exit Fullscreen';
-    } else {
-      fullscreen = false;
-      document.exitFullscreen();
-      fsEnter.innerHTML = 'Go Fullscreen';
-    }
-  });
+  //   let fullscreen;
+  //   let fsEnter = document.getElementById('fullscr');
+  //   fsEnter.addEventListener('click', function (e) {
+  //     e.preventDefault();
+  //     if (!fullscreen) {
+  //       fullscreen = true;
+  //       document.documentElement.requestFullscreen();
+  //       fsEnter.innerHTML = 'Exit Fullscreen';
+  //     } else {
+  //       fullscreen = false;
+  //       document.exitFullscreen();
+  //       fsEnter.innerHTML = 'Go Fullscreen';
+  //     }
+  //   });
   return (
     <>
       <svg
@@ -402,7 +402,7 @@ const MainAni = () => {
             y1="286.02"
             x2="171.33"
             y2="343.08"
-            xlinkㅗref="#lg4"
+            xlinkHref="#lg4"
           />
           <linearGradient
             id="lg6"
@@ -410,7 +410,7 @@ const MainAni = () => {
             y1="261.55"
             x2="504.61"
             y2="322.08"
-            // xlinkㅗref="#lg4" // react 에서는 아래처럼 적어줘야함!
+            // xlinkHref="#lg4" // react 에서는 아래처럼 적어줘야함!
             xlinkHref="#lg4"
           />
           <linearGradient
@@ -419,7 +419,7 @@ const MainAni = () => {
             y1="260.99"
             x2="295.66"
             y2="345.9"
-            xlinkㅗref="#lg4"
+            xlinkHref="#lg4"
           />
           <linearGradient
             id="lg8"
@@ -427,7 +427,7 @@ const MainAni = () => {
             y1="381.01"
             x2="373.3"
             y2="507.08"
-            xlinkㅗref="#lg4"
+            xlinkHref="#lg4"
           />
 
           {/* <!-- Scene3 Gradient --> */}
@@ -486,7 +486,7 @@ const MainAni = () => {
             y1="508.49"
             x2="166.09"
             y2="361.12"
-            xlinkㅗref="#linear-gradient"
+            xlinkHref="#linear-gradient"
           />
           <linearGradient
             id="linear-gradient-3"
@@ -494,7 +494,7 @@ const MainAni = () => {
             y1="508.01"
             x2="448.08"
             y2="508.01"
-            xlinkㅗref="#linear-gradient"
+            xlinkHref="#linear-gradient"
           />
           <linearGradient
             id="linear-gradient-4"
@@ -502,7 +502,7 @@ const MainAni = () => {
             y1="508.3"
             x2="761.05"
             y2="508.3"
-            xlinkㅗref="#linear-gradient"
+            xlinkHref="#linear-gradient"
           />
         </defs>
         <rect
@@ -512,10 +512,10 @@ const MainAni = () => {
           opacity="0.8"
           fill="url(#bg_grad)"
         />
-        <g id="clouds" fill="#fefefe">
+        <g id="clouds" style={{ fill: '#fefefe' }}>
           <path
             id="cloud4"
-            transform="translate(600 0)"
+            style={{ transform: 'translate(600px, 0)' }}
             d="M402.34,341.68c9.9-10.24,23.76-7.43,36.05-5.48C448,332,458.88,329,468.9,334c-.95-7.91,8.65-14.92,15.9-11.61-3.34-11.77,13-13.9,20.53-8.34A13.53,13.53,0,0,1,522,310.16c2.64-18.11,27.85-24.13,38.38-9.17,3.54-5.51,12.12-6.88,17.2-2.74,6.59-43.22,70.78-27.93,65.83,12.62,14.7-4.43,32,6.72,34.08,21.93,5.76-2.23,29.28,1,21.76,9.26"
           />
 
@@ -613,7 +613,7 @@ const MainAni = () => {
               width="707"
               height="429"
               transform="translate(728.46 16.5) scale(0.24)"
-              xlinkㅗref="https://i.ibb.co/TWfhqRG/fstar.png"
+              xlinkHref="https://i.ibb.co/TWfhqRG/fstar.png"
             />
             <circle
               cx="768.6"
@@ -826,16 +826,16 @@ const MainAni = () => {
 
       <div class="scrollElement"></div>
 
-      <a
+      {/* <a
         href="https://codepen.io/collection/DxkYzq"
         target="_blank"
         class="btn btn_works"
       >
         My Works
-      </a>
-      <button class="btn" id="fullscr">
+      </a> */}
+      {/* <button class="btn" id="fullscr">
         Go Fullscreen
-      </button>
+      </button> */}
     </>
   );
 };
