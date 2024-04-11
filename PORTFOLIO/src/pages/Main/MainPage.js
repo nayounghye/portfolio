@@ -1,10 +1,9 @@
 import React from 'react';
-import MainAni from '../../components/Main/MainAni';
 
 const MainPage = () => {
   return (
     <>
-      <MainAni />
+      <h1>MainPage</h1>
     </>
   );
 };
