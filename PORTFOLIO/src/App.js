@@ -7,8 +7,8 @@ function App() {
   return (
     <>
       <MainPage />
-      <InfoPage />
-      <ProjectPage />
+      {/* <InfoPage /> */}
+      {/* <ProjectPage /> */}
     </>
   );
 }
