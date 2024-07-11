@@ -4,6 +4,7 @@ import { gsap } from 'gsap/dist/gsap';
 import { useGSAP } from '@gsap/react/dist';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 
+// 리액스에서 gsap 불러오는 법 확인 필요
 gsap.registerPlugin(useGSAP, ScrollTrigger);
 
 const MainPage = () => {
