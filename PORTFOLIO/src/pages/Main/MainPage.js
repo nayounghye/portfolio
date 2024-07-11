@@ -4,41 +4,41 @@ import { gsap } from 'gsap/dist/gsap';
 import { useGSAP } from '@gsap/react/dist';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 
-// gsap.registerPlugin(useGSAP, ScrollTrigger);
+gsap.registerPlugin(useGSAP, ScrollTrigger);
 
-// const MainPage = () => {
-//   console.clear();
+const MainPage = () => {
+  console.clear();
 
-//   gsap.registerPlugin(ScrollTrigger);
+  gsap.registerPlugin(ScrollTrigger);
 
-//   window.addEventListener('load', () => {
-//     gsap
-//       .timeline({
-//         scrollTrigger: {
-//           trigger: '.wrapper',
-//           start: 'top top',
-//           end: '+=150%',
-//           pin: true,
-//           scrub: true,
-//           markers: true,
-//         },
-//       })
-//       .to('img', {
-//         scale: 2,
-//         z: 350,
-//         transformOrigin: 'center center',
-//         ease: 'power1.inOut',
-//       })
-//       .to(
-//         '.section.hero',
-//         {
-//           scale: 1.1,
-//           transformOrigin: 'center center',
-//           ease: 'power1.inOut',
-//         },
-//         '<'
-//       );
-//   });
+  window.addEventListener('load', () => {
+    gsap
+      .timeline({
+        scrollTrigger: {
+          trigger: '.wrapper',
+          start: 'top top',
+          end: '+=150%',
+          pin: true,
+          scrub: true,
+          markers: true,
+        },
+      })
+      .to('img', {
+        scale: 2,
+        z: 350,
+        transformOrigin: 'center center',
+        ease: 'power1.inOut',
+      })
+      .to(
+        '.section.hero',
+        {
+          scale: 1.1,
+          transformOrigin: 'center center',
+          ease: 'power1.inOut',
+        },
+        '<'
+      );
+  });
 
   return (
     <>
