@@ -1,7 +1,46 @@
 import React from 'react';
 import '../../styles/style.scss';
+import { gsap } from 'gsap/dist/gsap';
+import { useGSAP } from '@gsap/react/dist';
+import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
+
+// 리액스에서 gsap 불러오는 법 확인 필요
+gsap.registerPlugin(useGSAP, ScrollTrigger);
 
 const MainPage = () => {
+  console.clear();
+
+  gsap.registerPlugin(ScrollTrigger);
+
+  window.addEventListener('load', () => {
+    gsap
+      .timeline({
+        scrollTrigger: {
+          trigger: '.wrapper',
+          start: 'top top',
+          end: '+=150%',
+          pin: true,
+          scrub: true,
+          markers: true,
+        },
+      })
+      .to('img', {
+        scale: 2,
+        z: 350,
+        transformOrigin: 'center center',
+        ease: 'power1.inOut',
+      })
+      .to(
+        '.section.hero',
+        {
+          scale: 1.1,
+          transformOrigin: 'center center',
+          ease: 'power1.inOut',
+        },
+        '<'
+      );
+  });
+
   return (
     <>
       <div class="mainContainer">
